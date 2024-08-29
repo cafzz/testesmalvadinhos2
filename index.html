@@ -1,0 +1,33 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infinite Button</title>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+        }
+        #button {
+            position: absolute;
+            padding: 20px;
+            background: #f06;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <button id="button">Click Me!</button>
+    <script>
+        const button = document.getElementById('button');
+        document.addEventListener('mousemove', (e) => {
+            const { clientX: mouseX, clientY: mouseY } = e;
+            button.style.left = `${mouseX + 20}px`;
+            button.style.top = `${mouseY + 20}px`;
+        });
+    </script>
+</body>
+</html>
