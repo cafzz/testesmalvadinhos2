@@ -1,5 +1,5 @@
 const button = document.getElementById('button');
-const offset = 20; // Distance to move button away from the cursor
+const offset = 10; // Distance to move button away from the cursor
 
 document.addEventListener('mousemove', (e) => {
     // Get the mouse coordinates
